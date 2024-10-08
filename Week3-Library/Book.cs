@@ -40,10 +40,10 @@ namespace Week3_Library
         //Constructor for Book object
         public Book(string bookTitle, string bookAuthor, string bookISBN, int bookPages)
         {
-            Title = bookTitle;
-            Author = bookAuthor;
-            ISBN = bookISBN;
-            Pages = bookPages;
+            this.title = bookTitle;
+            this.author = bookAuthor;
+            this.isbn = bookISBN;
+            this.pages = bookPages;
         }
 
         public void DisplayInfo()
