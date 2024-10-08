@@ -1,9 +1,22 @@
-﻿class Book
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
+
+class Book
 {
+    //Properties
     string Title;
     string Author;
     string ISBN;
     int Pages;
+
+    //Constructor for Book object
+    public Book(string bookTitle, string bookAuthor, string bookISBN, int bookPages)
+    {
+        Title = bookTitle;
+        Author = bookAuthor;
+        ISBN = bookISBN;
+        Pages = bookPages;
+    }
 
     void DisplayInfo()
     {
@@ -17,20 +30,14 @@
         Console.WriteLine();
     }
 
+
     static void Main(string[] args)
     {
         //create a new instance of the book class
-        Book book = new Book();
-        book.Title = "C# for beginners";
-        book.Author = "Bill 'Wild One' Gates";
-        book.Pages = 21;
-        book.ISBN = "A1234567"; 
+        Book book = new Book("C# for beginners", "Bill Gates", "A134524306", 21);
 
-        Book book2 = new Book();
-        book2.Title = "C# methods and classes";
-        book2.Author = "Microsoft";
-        book2.Pages = 121;
-        book2.ISBN = "B1029384";
+        //another instance
+        Book book2 = new Book("Visual Studio 2022", "Microsoft", "B123456236", 121);
 
         //output book information to the console
         book.DisplayInfo();
